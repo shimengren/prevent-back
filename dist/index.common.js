@@ -1023,7 +1023,6 @@ var ProxyCreatePreventBack = function () {
   };
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProxyCreatePreventBack);
-window.PreventBack = ProxyCreatePreventBack;
 })();
 
 exports.PreventBack = __webpack_exports__;

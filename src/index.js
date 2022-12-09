@@ -152,4 +152,3 @@ let ProxyCreatePreventBack = (function () {
 
 export default ProxyCreatePreventBack;
 
-window.PreventBack = ProxyCreatePreventBack;

@@ -1033,9 +1033,9 @@ var ProxyCreatePreventBack = function () {
   };
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProxyCreatePreventBack);
-window.PreventBack = ProxyCreatePreventBack;
 })();
 
+__webpack_exports__ = __webpack_exports__["default"];
 /******/ 	return __webpack_exports__;
 /******/ })()
 ;

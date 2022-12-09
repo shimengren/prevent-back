@@ -9,6 +9,7 @@ module.exports = {
                 name: 'PreventBack',
                 type: 'umd',
                 umdNamedDefine: true,
+                export: "default"
             },
         },
         "index.common": {
@@ -22,7 +23,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: "[name].js",
-        clean: true
+        clean: true,
     },
     module: {
         rules: [
