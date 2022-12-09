@@ -1,5 +1,5 @@
 {
-  "name": "prevent-back",
+  "name": "prevent-user-back",
   "version": "1.0.0",
   "description": "prevent user back",
   "main": "./dist/index.common.js",
