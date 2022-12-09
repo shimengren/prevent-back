@@ -1,0 +1,31 @@
+{
+  "name": "prevent-back",
+  "version": "1.0.0",
+  "description": "prevent user back",
+  "main": "./dist/index.es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "webpack --config webpack.config.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shimengren/prevent-back.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shimengren/prevent-back/issues"
+  },
+  "homepage": "https://github.com/shimengren/prevent-back#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

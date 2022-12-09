@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1, user-scalable=yes, width=device-width, minimal-ui, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <!-- 引入样式文件 -->
+    <link
+        rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.12/lib/index.css"/>
+    <style>
+        #app{
+            height:1200px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <van-button @click="addObserver" round type="primary">增加观察者</van-button>
+      <van-button @click="delObserver"  round type="primary">删除观察者</van-button>
+      <div>当前的观察者数量：{{length}}</div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+  <!-- 引入 Vue 和 Vant 的 JS 文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vant@2.12/lib/vant.min.js"></script>
+  <script src="../dist/index.umd.js" type="text/javascript"></script>
+  <script>
+    console.log("PreventBack",window.PreventBack)
+    new Vue({
+      el: '#app',
+      data: function () {
+        return {
+          idList: [],
+          preventBack: null,
+          length: 0
+        }
+      },
+      methods: {
+        addObserver() {
+          console.log('addObserver')
+          const { id, length } = this.preventBack.addObserver(() => {
+            console.log('i want prevent')
+            return false
+          })
+          this.idList.push(id)
+          this.length = length;
+        },
+        delObserver() {
+          const id = this.idList.pop();
+          this.length = this.preventBack.delObserver(id)
+        }
+      },
+      mounted() {
+        this.preventBack = PreventBack()
+      }
+    })
+    Vue.use(vant.Button);
+  </script>
+</html>
