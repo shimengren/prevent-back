@@ -2,7 +2,7 @@
   "name": "prevent-back",
   "version": "1.0.0",
   "description": "prevent user back",
-  "main": "./dist/index.es.js",
+  "main": "./dist/index.common.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "transpile": "webpack --config webpack.config.js"
